@@ -1,0 +1,29 @@
+@import './Theme.module.css';
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  background: linear-gradient(120deg, var(--pastel-green), var(--pastel-blue) 90%);
+  color: var(--brand-mint);
+  min-height: 100vh;
+  transition: background 0.6s;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brand-mint);
+  transition: color 0.2s;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background: var(--pastel-blue);
+  border-radius: 18px;
+  box-shadow: var(--soft-shadow);
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,128 @@
+@import '../Theme.module.css';
+
+.features {
+  padding: 4rem 0;
+  text-align: center;
+  animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.features h2 {
+  color: var(--brand-purple);
+  margin-bottom: 2rem;
+  font-family: var(--main-font);
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.card {
+  border-radius: 18px;
+  padding: 2.2rem 1.7rem;
+  width: 250px;
+  box-shadow: var(--soft-shadow);
+  transition: transform 0.22s, box-shadow 0.22s, background 0.22s;
+  animation: cardFadeIn 1s;
+  border: 2px solid var(--pastel-lilac);
+  background: transparent;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.05) rotateZ(-1deg);
+  background: var(--brand-purple);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--brand-pink);
+}
+
+@keyframes cardFadeIn {
+  0% { opacity: 0; transform: scale(0.9);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+.icon {
+  width: 90px;
+  margin-bottom: 1.1rem;
+  filter: drop-shadow(0 2px 7px var(--pastel-blue));
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-family: var(--main-font);
+  font-size: 1.3rem;
+}
+
+.card p {
+  font-size: 1.03rem;
+  color: var(--pastel-mint);
+  font-family: var(--main-font);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 90%;
+    padding: 1.7rem 1.3rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .icon {
+    width: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  .features h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 1.5rem 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    width: 60px;
+  }
+}

@@ -1,0 +1,38 @@
+:root {
+  /* Logo-Inspired Color Palette */
+  --pastel-lilac: #b3a43a;        /* gold from logo text */
+  --pastel-mint: #96e2e7;         /* cyan from logo tagline */
+  --pastel-peach: #ff9776;        /* soft accent, matches gold nicely */
+  --pastel-yellow: #ffe066;       /* pastel yellow accent */
+  --pastel-blue: #232d23;         /* dark green background from logo */
+  --pastel-lavender: #cfd7fa;     /* light pastel accent */
+  --pastel-green: #10271a;        /* very deep green from logo bg */
+
+  /* Accent and Brand Colors */
+  --brand-purple: #b3a43a;        /* gold */
+  --brand-pink: #fa5d97;          /* punchy pastel accent */
+  --brand-mint: #96e2e7;          /* cyan */
+  --brand-orange: #ff7f50;        /* fresh accent */
+  --brand-navy: #232d23;          /* dark green/navy from logo */
+  --brand-slate: #31363f;         /* deep slate for text */
+
+  /* Gradients */
+  --header-gradient: linear-gradient(90deg, #10271a 0%, #b3a43a 100%);
+  --hero-gradient: linear-gradient(120deg, #10271a 0%, #96e2e7 100%);
+  --feature-gradient: linear-gradient(135deg, #b3a43a 0%, #cfd7fa 100%);
+  --footer-gradient: linear-gradient(90deg, #232d23 0%, #10271a 100%);
+  --button-gradient: linear-gradient(90deg, #b3a43a 0%, #96e2e7 100%);
+  --button-gradient-hover: linear-gradient(90deg, #96e2e7 0%, #b3a43a 100%);
+
+  /* Shadows */
+  --soft-shadow: 0 8px 30px rgba(16, 39, 26, 0.15), 0 1.5px 6px rgba(179, 164, 58, 0.07);
+  --card-hover-shadow: 0 14px 38px rgba(16, 39, 26, 0.22), 0 3px 8px rgba(150, 226, 231, 0.13);
+
+  /* Fonts */
+  --main-font: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

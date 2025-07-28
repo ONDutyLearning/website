@@ -1,0 +1,142 @@
+@import '../Theme.module.css';
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(35, 45, 35, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 0.8rem;
+  box-shadow: var(--soft-shadow);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.logoImg {
+  height: 56px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(150, 226, 231, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.logoImg:hover {
+  transform: scale(1.05);
+}
+
+/* Toggle button for mobile */
+.menuToggle {
+  display: none;
+  background: var(--button-gradient);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-family: var(--main-font);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menuToggle:hover {
+  background: var(--button-gradient-hover);
+}
+
+/* Navigation list */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navLinks li a {
+  color: var(--pastel-mint);
+  font-weight: 600;
+  font-family: var(--main-font);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.navLinks li a:hover {
+  color: #ffffff;
+  background: rgba(150, 226, 231, 0.25); /* soft cyan transparent */
+  box-shadow: inset 0 0 0 2px var(--brand-mint);
+  transform: scale(1.02);
+}
+
+
+/* RESPONSIVE BELOW 768PX */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: inline-block;
+  }
+
+  .nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.7rem;
+    margin-top: 1rem;
+  }
+
+  .navLinks li {
+    width: 100%;
+  }
+
+  .navLinks li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .logoImg {
+    height: 40px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

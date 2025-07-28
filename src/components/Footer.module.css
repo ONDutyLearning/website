@@ -1,0 +1,11 @@
+@import '../Theme.module.css';
+
+.footer {
+  background: var(--footer-gradient);
+  color: var(--brand-purple);
+  text-align: center;
+  padding: 1.4rem 0;
+  font-size: 1.07rem;
+  font-family: var(--main-font);
+  box-shadow: var(--soft-shadow);
+}

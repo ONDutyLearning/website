@@ -1,0 +1,183 @@
+@import '../Theme.module.css';
+
+.about {
+  padding: 4rem 0;
+  text-align: center;
+  animation: fadeInUp 1s;
+}
+
+.about h2 {
+  margin-bottom: 1.5rem;
+  color: var(--brand-purple);
+  font-family: var(--main-font);
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* Motto Section */
+.mottoSection {
+  margin-bottom: 2.5rem;
+}
+
+.mottoTitle {
+  font-size: 1.4rem;
+  color: var(--brand-purple);
+  margin-bottom: 0.7rem;
+  font-family: var(--main-font);
+}
+
+.mottoList {
+  list-style: disc;
+  color: var(--pastel-mint);
+  text-align: left;
+  font-size: 1.15rem;
+  max-width: 620px;
+  margin: 0 auto;
+  padding-left: 1.4rem;
+  font-family: var(--main-font);
+}
+
+.mottoList li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Horizontal Scroll Cards */
+.scrollWrapper {
+  overflow-x: auto;
+  padding-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scrollWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.featuresRow {
+  display: flex;
+  gap: 1.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.featureCard {
+  border-radius: 18px;
+  box-shadow: var(--soft-shadow);
+  padding: 2rem 1.4rem 1.5rem;
+  width: 260px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.22s, box-shadow 0.22s;
+  border: 2px solid var(--pastel-lilac);
+  background: #ffffff0a;
+  backdrop-filter: blur(6px);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px) scale(1.04) rotateZ(-1deg);
+  background: var(--pastel-lilac);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--brand-pink);
+}
+
+.featureImg {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 2px 12px #e3d0ff55;
+  background: #f8f4ff;
+}
+
+.featureCard h3 {
+  color: white;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  font-family: var(--main-font);
+}
+
+.featureCard p {
+  font-size: 1.01rem;
+  color: var(--pastel-mint);
+  font-family: var(--main-font);
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .scrollWrapper {
+    margin: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .featureCard {
+    width: 220px;
+    padding: 1.5rem 1rem;
+  }
+
+  .featureImg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .mottoList {
+    font-size: 1.05rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about h2 {
+    font-size: 1.7rem;
+  }
+
+  .featureCard {
+    width: 180px;
+    padding: 1.1rem 0.7rem;
+  }
+
+  .featureImg {
+    width: 58px;
+    height: 58px;
+  }
+
+  .mottoTitle {
+    font-size: 1.2rem;
+  }
+
+  .mottoList {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .featureCard {
+    width: 160px;
+    padding: 1rem 0.6rem;
+  }
+
+  .featureImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .featureCard h3 {
+    font-size: 1rem;
+  }
+
+  .featureCard p {
+    font-size: 0.9rem;
+  }
+}
