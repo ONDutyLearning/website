@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.flex}>
-        <img src="/logo.jpg" alt="On Duty Learning Logo" className={styles.logoImg} />
+        <img src="./logo.jpg" alt="On Duty Learning Logo" className={styles.logoImg} />
 
         <button className={styles.menuToggle} onClick={handleToggleMenu}>
           {menuOpen ? 'CLOSE ✕' : 'MENU ☰'}
